@@ -97,7 +97,7 @@ fun lazyRowProgress(
                     Modifier
                         .padding(7.dp)
                         .height(230.dp)
-                        .width(38.sp.value.dp)
+                        .width(42.sp.value.dp)
                         .background(
                             if (date.date.formatDateDayMonth() == current.value) {
                                 Color(red = 124, green = 124, blue = 124, alpha = 100)
@@ -122,7 +122,7 @@ fun lazyRowProgress(
                         if (date.date.formatDateDayMonth() == current.value) {
                             Text(
                                 text = date.date.formatDateDayMonth().substring(0, 5),
-                                color = Color.Black,
+                                color = MaterialTheme.colorScheme.background,
                                 modifier = Modifier.background(color, CircleShape),
                                 fontSize = 14.sp,
                                 maxLines = 1,
@@ -131,7 +131,7 @@ fun lazyRowProgress(
                         } else {
                             Text(
                                 text = date.date.formatDateDayMonth().substring(0, 2),
-                                color = Color.White,
+                                color =MaterialTheme.colorScheme.onBackground,
                                 fontSize = 19.sp
                             )
                         }

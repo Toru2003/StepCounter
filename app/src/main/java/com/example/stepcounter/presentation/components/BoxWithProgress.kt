@@ -35,12 +35,12 @@ fun BoxWithProgress(target: Int, columnSize: Float) {
                 strokeWidth = 1.dp.toPx(),
             )
             val s = size.height * (1 - 1 / (2 * columnSize))
-            drawLine(
-                color = Color.Yellow,
-                start = Offset(0f, s),
-                end = Offset(size.width, s),
-                strokeWidth = 1.dp.toPx(),
-            )
+//            drawLine(
+//                color = Color.Yellow,
+//                start = Offset(0f, s),
+//                end = Offset(size.width, s),
+//                strokeWidth = 1.dp.toPx(),
+//            )
             val paint = Paint().asFrameworkPaint().apply {
                 isAntiAlias = true
                 textSize = 13.sp.toPx()
@@ -52,11 +52,11 @@ fun BoxWithProgress(target: Int, columnSize: Float) {
                 size.width - 100, size.height * (1 - 1 / columnSize) + 33f,
                 paint
             )
-            drawContext.canvas.nativeCanvas.drawText(
-                "${(target / 2)}",
-                size.width - 100, s + 33f,
-                paint
-            )
+//            drawContext.canvas.nativeCanvas.drawText(
+//                "${(target / 2)}",
+//                size.width - 100, s + 33f,
+//                paint
+//            )
         }
     }
 }
